@@ -46,7 +46,7 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override 
-	public void atualizar(Long id, Cliente cliente) {
+	public void atualizr(Long id, Cliente cliente) {
 		// Buscar Cliente por ID, caso exista:
 		Optional<Cliente> clienteBd = clienteRepository.findById(id);
 		if (clienteBd.isPresent()) {
@@ -76,29 +76,5 @@ public class ClienteServiceImpl implements ClienteService {
 		clienteRepository.save(cliente);
 	}
 
-    @Override
-    public void inserir(Cliente cliente) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'inserir'");
-    }
-
-    @Override
-    public void atualizar(Long id, Cliente cliente) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'atualizar'");
-    }
-
-    @Override
-    public void inserir(Cliente cliente) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'inserir'");
-    }
-
-    @Override
-    public void atualizar(Long id, Cliente cliente) {
-        
-        
-        throw new UnsupportedOperationException("Unimplemented method 'atualizar'");
-    }
-
+    
 }

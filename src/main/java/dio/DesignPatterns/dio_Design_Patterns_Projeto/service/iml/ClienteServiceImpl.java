@@ -9,7 +9,8 @@ import dio.DesignPatterns.dio_Design_Patterns_Projeto.model.Cliente;
 import dio.DesignPatterns.dio_Design_Patterns_Projeto.model.ClienteRepository;
 import dio.DesignPatterns.dio_Design_Patterns_Projeto.model.Endereco;
 import dio.DesignPatterns.dio_Design_Patterns_Projeto.model.EnderecoRepository;
-import dio.DesignPatterns.dio_Design_Patterns_Projeto.service.*;
+import dio.DesignPatterns.dio_Design_Patterns_Projeto.service.ClienteService;
+import dio.DesignPatterns.dio_Design_Patterns_Projeto.service.ViaCepService;
 
 @Service
 public class ClienteServiceImpl implements ClienteService {
@@ -46,7 +47,7 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override 
-	public void atualizr(Long id, Cliente cliente) {
+	public void atualizar(Long id, Cliente cliente) {
 		// Buscar Cliente por ID, caso exista:
 		Optional<Cliente> clienteBd = clienteRepository.findById(id);
 		if (clienteBd.isPresent()) {
